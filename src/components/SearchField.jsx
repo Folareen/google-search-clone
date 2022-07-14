@@ -3,11 +3,14 @@ import { FaMicrophone, FaSearch } from 'react-icons/fa'
 import StyledSearchField from '../styles/StyledSearchFIeld.styled'
 import SearchButtons from './SearchButtons'
 import logo from "../assets/google-logo.png";
+import {Link} from 'react-router-dom'
 
 const SearchField = ({showButtons, size}) => {
   return (
     <StyledSearchField big={size}>
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
         <div>
           <FaSearch/>
           <input type="search" />

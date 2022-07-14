@@ -32,7 +32,7 @@ const StyledSearchField = styled.form`
 
     input {
       flex: 1;
-      padding: 5px;
+      padding: 5px 10px;
       outline: none;
     }
   }
