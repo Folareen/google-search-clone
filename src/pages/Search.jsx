@@ -1,31 +1,35 @@
-import React from 'react'
-import { StyledSearch } from '../styles/StyledSearch.styled'
-import logo from '../assets/google-logo.png'
+import React from "react";
+import { StyledSearch } from "../styles/StyledSearch.styled";
+import logo from "../assets/google-logo.png";
+import { FaIcons, FaUser } from "react-icons/fa";
+import SearchField from "../components/SearchField";
+import SearchButtons from "../components/SearchButtons";
 
 const Search = () => {
   return (
     <StyledSearch>
-        <nav>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-        </nav> 
+      <nav>
         <div>
-            <img src={logo} alt="" />
+          <button>Gmail</button>
+          <button>Images</button>
         </div>
-        <StyledSearchField>
-        </StyledSearchField>
-        <button type='submit'>
-            Google Search
-        </button>
-        <a href='https://www.google.com/doodles'>
-            I'm Feeling Lucky
-        </a>
+        <div>
+          <button>
+            <FaIcons />
+          </button>
+          <button>
+            <FaUser />
+          </button>
+        </div>
+      </nav>
+      <main>
+        <img src={logo} alt="" />
+        <SearchField showButtons={true} />
+      </main>
 
-
+      <p>Nigeria</p>
     </StyledSearch>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

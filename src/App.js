@@ -1,10 +1,14 @@
 import Search from "./pages/Search";
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <Search />
-    </div>
+    <>
+      <GlobalStyles />
+      <div>
+        <Search />
+      </div>
+    </>
   );
 }
 
