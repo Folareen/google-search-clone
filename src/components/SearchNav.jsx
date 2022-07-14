@@ -16,7 +16,8 @@ const SearchNav = () => {
       
       {navContents.map(
         ({icon, title, path}, index) => {
-          return <Link to={path} key={index}>
+          return <Link to={path} key={index}
+          >
             {icon} {title}
           </Link>
         }
