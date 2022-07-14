@@ -2,22 +2,22 @@ import React from 'react'
 import { FaMicrophone, FaSearch } from 'react-icons/fa'
 import StyledSearchField from '../styles/StyledSearchFIeld.styled'
 import SearchButtons from './SearchButtons'
+import logo from "../assets/google-logo.png";
 
-const SearchField = ({showButtons}) => {
+const SearchField = ({showButtons, size}) => {
   return (
-    <StyledSearchField>
+    <StyledSearchField big={size}>
+        <img src={logo} alt="" />
+        <div>
+          <FaSearch/>
+          <input type="search" />
+          <FaMicrophone/>
+        </div>
 
-      <div>
-        <FaSearch/>
-        <input type="search" />
-        <FaMicrophone/>
-      </div>
+        {
+          showButtons && <SearchButtons/>
+        }
 
-      {
-        showButtons && <SearchButtons/>
-      }
-
-      
     </StyledSearchField>
   )
 }

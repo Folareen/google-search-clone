@@ -1,13 +1,11 @@
 import React from "react";
-import { StyledSearch } from "../styles/StyledSearch.styled";
-import logo from "../assets/google-logo.png";
+import StyledSearch  from "../styles/StyledSearch.styled";
 import { FaIcons, FaUser } from "react-icons/fa";
 import SearchField from "../components/SearchField";
-import SearchButtons from "../components/SearchButtons";
 
 const Search = () => {
   return (
-    <StyledSearch>
+    <StyledSearch >
       <nav>
         <div>
           <button>Gmail</button>
@@ -22,11 +20,7 @@ const Search = () => {
           </button>
         </div>
       </nav>
-      <main>
-        <img src={logo} alt="" />
-        <SearchField showButtons={true} />
-      </main>
-
+      <SearchField showButtons={true} size />
       <p>Nigeria</p>
     </StyledSearch>
   );

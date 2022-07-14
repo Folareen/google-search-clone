@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSearch = styled.div`
+const StyledSearch = styled.div`
   background-color: rgb(32, 33, 37);
   height: 100vh;
   padding: 20px 0;
@@ -39,18 +39,6 @@ export const StyledSearch = styled.div`
     }
   }
 
-  main {
-    img {
-      width: 80%;
-      max-wdith: 300px;
-      height: 100px;
-      display: block;
-      margin: 0 auto;
-      object-fit: contain;
-      margin-bottom: 40px;
-    }
-  }
-
   p {
     text-align: center;
     color: rgb(139, 155, 170);
@@ -58,3 +46,4 @@ export const StyledSearch = styled.div`
     padding: 10px;
   }
 `;
+export default StyledSearch;

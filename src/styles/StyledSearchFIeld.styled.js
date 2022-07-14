@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
 const StyledSearchField = styled.form`
-  div:first-child {
+  img {
+    width: 80%;
+    max-width: 300px;
+    height: ${(props) => (props.big ? "100px" : "50px")};
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: ${(props) => (props.big ? "40px" : "20px")};
+  }
+  div:first-of-type {
     background-color: rgb(32, 33, 37);
     border: 1px solid red;
     width: 90%;
     max-width: 600px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto ${(props) => (props.big ? "30px" : "10px")} auto;
     padding: 10px 15px;
     border-radius: 25px;
     display: flex;
