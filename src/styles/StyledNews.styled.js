@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledVideos = styled.div`
+const StyledNews = styled.div`
   padding: 20px 0;
   min-height: 100vh;
   background-color: rgb(32, 33, 37);
@@ -13,4 +13,4 @@ const StyledVideos = styled.div`
   }
 `;
 
-export default StyledVideos;
+export default StyledNews;

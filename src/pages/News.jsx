@@ -1,18 +1,18 @@
 import React from 'react'
 import SearchField from '../components/SearchField'
 import SearchNav from '../components/SearchNav'
-import StyledVideos from '../styles/StyledVideos.styled'
+import StyledNews from '../styles/StyledNews.styled'
 
-const Videos = () => {
+const News = () => {
   return (
-    <StyledVideos>
+    <StyledNews>
         <SearchField/>
         <SearchNav/>
         <div>
-            Videos results
+            News results
         </div>
-    </StyledVideos>
+    </StyledNews>
   )
 }
 
-export default Videos
+export default News
