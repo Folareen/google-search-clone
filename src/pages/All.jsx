@@ -3,6 +3,7 @@ import SearchNav from '../components/SearchNav'
 import StyledAll from '../styles/StyledAll.styled'
 import SearchField from '../components/SearchField'
 import useGoogleSearch from '../hooks/useGoogleSearch'
+import Loading from '../components/Loading'
 
 const AllResults = () => {
   // const {loading, result, error} = useGoogleSearch("javascript", "search")
@@ -16,13 +17,15 @@ const AllResults = () => {
   // )
 
   return (
-    <StyledAll>
-      <SearchField />
-      <SearchNav />
-      <div>
-        results
-      </div>
-    </StyledAll>
+    <Loading/>
+
+    // <StyledAll>
+    //   <SearchField />
+    //   <SearchNav />
+    //   <div>
+    //     results
+    //   </div>
+    // </StyledAll>
   )
 }
 
