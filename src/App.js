@@ -6,13 +6,13 @@ import Images from "./pages/Images";
 import Videos from "./pages/Videos";
 import News from "./pages/News";
 import { useContext } from "react";
-import Context from "./context/Context";
+import SearchTermContextProvider from "./context/SearchTermContext";
 // import
 
 function App() {
   return (
     <Router>
-      <Context.Provider>
+      <SearchTermContextProvider>
         <GlobalStyles />
         <Routes>
           <Route element={<Search />} exact path="/" />
@@ -21,7 +21,7 @@ function App() {
           <Route element={<Videos />} path="/videos" />
           <Route element={<News />} path="/news" />
         </Routes>
-      </Context.Provider>
+      </SearchTermContextProvider>
     </Router>
   );
 }

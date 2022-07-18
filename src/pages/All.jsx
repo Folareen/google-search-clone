@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import SearchNav from '../components/SearchNav'
 import StyledAll from '../styles/StyledAll.styled'
 import SearchField from '../components/SearchField'
 import useGoogleSearch from '../hooks/useGoogleSearch'
 import Loading from '../components/Loading'
+// import {termContext} from '../context/SearchTermContext'
 
 const AllResults = () => {
   // const {loading, result, error} = useGoogleSearch("javascript", "search")
@@ -16,16 +17,19 @@ const AllResults = () => {
   //   }
   // )
 
-  return (
-    <Loading/>
+  // const {searchTerm, setSearchTerm} = useContext(termContext)
+  // console.log(hey)
 
-    // <StyledAll>
-    //   <SearchField />
-    //   <SearchNav />
-    //   <div>
-    //     results
-    //   </div>
-    // </StyledAll>
+  return (
+    // <Loading/>
+
+    <StyledAll>
+      <SearchField />
+      <SearchNav />
+      <div>
+        results
+      </div>
+    </StyledAll>
   )
 }
 

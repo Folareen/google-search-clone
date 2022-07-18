@@ -31,7 +31,7 @@ const useGoogleSearch = (term, type) => {
     }
   };
 
-  return { loading, result, error };
+  return [loading, result, error];
 };
 
 export default useGoogleSearch;
