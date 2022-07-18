@@ -4,16 +4,16 @@ import StyledAll from '../styles/StyledAll.styled'
 import SearchField from '../components/SearchField'
 import useGoogleSearch from '../hooks/useGoogleSearch'
 
-const AllResults = ({children}) => {
-  const {loading, result, error} = useGoogleSearch("elon", "search")
+const AllResults = () => {
+  // const {loading, result, error} = useGoogleSearch("javascript", "search")
 
-  useEffect(
-    () => {
-      console.log(
-        loading, result, error
-      )
-    }
-  )
+  // useEffect(
+  //   () => {
+  //     console.log(
+  //       loading, result, error
+  //     )
+  //   }
+  // )
 
   return (
     <StyledAll>
