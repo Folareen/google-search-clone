@@ -4,31 +4,52 @@ import StyledAll from '../styles/StyledAll.styled'
 import SearchField from '../components/SearchField'
 import useGoogleSearch from '../hooks/useGoogleSearch'
 import Loading from '../components/Loading'
-// import {termContext} from '../context/SearchTermContext'
+import {SearchTermContext} from '../context/SearchTermContext'
+import Error from '../components/Error'
 
 const AllResults = () => {
-  // const {loading, result, error} = useGoogleSearch("javascript", "search")
 
-  // useEffect(
-  //   () => {
-  //     console.log(
-  //       loading, result, error
-  //     )
-  //   }
-  // )
+  const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
 
-  // const {searchTerm, setSearchTerm} = useContext(termContext)
-  // console.log(hey)
+  const [loading, result, error] = useGoogleSearch(searchTerm, "search")
 
   return (
-    // <Loading/>
 
     <StyledAll>
       <SearchField />
       <SearchNav />
+      {
+        loading ?
+        <Loading/>
+        :
+          (
+        error ?
+        <Error/>
+        :
       <div>
-        results
-      </div>
+        {
+          result?.results?.map(
+            ({title, link, description}, index) => {
+              return <div key={index}>
+                <p>
+                  {link}
+                </p>
+                <a href={link}>
+                  {title}
+                </a>
+                <p>
+                  {description}
+                </p>
+                </div>
+            }
+          )
+        }
+      </div>        
+          )
+
+      }
+
+
     </StyledAll>
   )
 }
