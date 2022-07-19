@@ -5,11 +5,15 @@ const StyledVideos = styled.div`
   min-height: 100vh;
   background-color: rgb(32, 33, 37);
 
-  div {
+  > div {
     border-top: 1px solid rgb(139, 155, 170);
     border-bottom: 1px solid rgb(139, 155, 170);
-    padding: 10px;
+    padding: 20px 10px;
     margin-top: -2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
   }
 `;
 
