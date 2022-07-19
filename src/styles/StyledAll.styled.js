@@ -5,13 +5,13 @@ const StyledAll = styled.div`
   min-height: 100vh;
   padding: 20px 0;
 
-  > div {
+  > div:not(.sc-jSMfEi) {
     border-top: 1px solid rgb(139, 155, 170);
     border-bottom: 1px solid rgb(139, 155, 170);
     padding: 10px;
     margin-top: -2px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    display: flex;
+    flex-direction: column;
     grid-gap: 10px;
 
     div {

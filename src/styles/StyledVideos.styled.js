@@ -5,7 +5,7 @@ const StyledVideos = styled.div`
   min-height: 100vh;
   background-color: rgb(32, 33, 37);
 
-  > div {
+  > div:not(.sc-jSMfEi) {
     border-top: 1px solid rgb(139, 155, 170);
     border-bottom: 1px solid rgb(139, 155, 170);
     padding: 20px 10px;
