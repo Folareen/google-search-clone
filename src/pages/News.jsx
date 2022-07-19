@@ -11,7 +11,7 @@ const News = () => {
 
   const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
 
-  const [loading, result, error] = useGoogleSearch(searchTerm, "search")
+  const [loading, result, error] = useGoogleSearch(searchTerm, "news")
 
   return (
     <StyledNews>
@@ -29,11 +29,9 @@ const News = () => {
           {result?.entries?.map(({ id, links, source, title }) => (
             <div key={id}>
               <a href={links?.[0].href} target="_blank" rel="noreferrer ">
-                <p >{title}</p>
+              {title}
               </a>
-              <div>
-                <a href={source?.href} target="_blank" rel="noreferrer"> {source?.href}</a>
-              </div>
+              <a href={source?.href} target="_blank" rel="noreferrer"> {source?.href}</a>
             </div>
           ))}
         </div> 
