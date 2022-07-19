@@ -23,7 +23,6 @@ const SearchField = ({ showButtons, size }) => {
     }
     // 
     // 
-    searchInput.current.value = searchTerm;
   };
 
   // useEffect(
