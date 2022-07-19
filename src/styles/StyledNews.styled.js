@@ -11,7 +11,7 @@ const StyledNews = styled.div`
     padding: 10px;
     margin-top: -2px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 10px;
 
     div {
