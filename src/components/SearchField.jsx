@@ -9,7 +9,7 @@ import { SearchTermContext } from "../context/SearchTermContext";
 
 const SearchField = ({ showButtons, size }) => {
   const { searchTerm, setSearchTerm } = useContext(SearchTermContext);
-  const searchInput = useRef(null);
+  const searchInput = useRef();
   const navigate = useNavigate();
   const location = useLocation();
   //
