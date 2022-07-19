@@ -28,7 +28,7 @@ const Videos = () => {
         <div >
           {result?.results?.map((video, index) => (
             <div key={index} >
-              <ReactPlayer url={video.additional_links?.[0].href} controls width="400px" height="250px" />
+              <ReactPlayer url={video.additional_links?.[0].href} controls width="350px" height="250px" />
             </div>
           ))}
         </div>      
