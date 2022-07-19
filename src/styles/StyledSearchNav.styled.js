@@ -12,11 +12,10 @@ const StyledSearchNav = styled.nav`
     color: rgb(123, 124, 129);
     flex: 1;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 
     &.active {
       border-bottom: 3px solid rgb(141, 180, 239);
-      padding: 10px;
     }
   }
 `;
