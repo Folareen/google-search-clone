@@ -21,6 +21,9 @@ const SearchField = ({ showButtons, size }) => {
     if (location.pathname === "/") {
       navigate("/all");
     }
+    // 
+    // 
+    searchInput.current.value = searchTerm;
   };
 
   // useEffect(
