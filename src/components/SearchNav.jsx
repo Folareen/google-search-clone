@@ -19,7 +19,7 @@ const SearchNav = () => {
       {navContents.map(
         ({icon, title, path}, index) => {
           return <Link to={path} key={index}
-          className={path === location.pathname && 'active'}>
+          className={path === location.pathname ? 'active' : ''}>
             {icon} {title}
           </Link>
         }
