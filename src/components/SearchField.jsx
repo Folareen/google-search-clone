@@ -1,35 +1,24 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext} from "react";
 import { FaMicrophone, FaSearch } from "react-icons/fa";
 import StyledSearchField from "../styles/StyledSearchFIeld.styled";
 import SearchButtons from "./SearchButtons";
 import logo from "../assets/google-logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import useGoogleSearch from "../hooks/useGoogleSearch";
 import { SearchTermContext } from "../context/SearchTermContext";
 
 const SearchField = ({ showButtons, size }) => {
-  const { searchTerm, setSearchTerm } = useContext(SearchTermContext);
-  const searchInput = useRef();
+  const { searchTerm, setSearchTerm, inputValue, setInputValue} = useContext(SearchTermContext);
   const navigate = useNavigate();
   const location = useLocation();
-  //
-  // const [loading, result, error] = useGoogleSearch(searchTerm, "search")
 
   const googleSearch = (e) => {
     e.preventDefault();
-    setSearchTerm(searchInput.current.value);
+    setSearchTerm(inputValue);
     if (location.pathname === "/") {
       navigate("/all");
     }
-    // 
-    // 
   };
 
-  // useEffect(
-  //   () => {
-  //     // console.log(result)
-  //   }, [searchTerm]
-  // )
   return (
     <StyledSearchField big={size} onSubmit={googleSearch}>
       <Link to="/">
@@ -37,7 +26,11 @@ const SearchField = ({ showButtons, size }) => {
       </Link>
       <div>
         <FaSearch />
-        <input type="search" ref={searchInput} />
+        <input type="search" value={inputValue} onChange={
+          (e) => {
+            setInputValue(e.target.value)
+          }
+        }/>
         <FaMicrophone />
       </div>
 
