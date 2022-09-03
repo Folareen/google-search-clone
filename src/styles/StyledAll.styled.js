@@ -19,6 +19,9 @@ const StyledAll = styled.div`
       display: flex;
       flex-direction: column;
       word-wrap: break-word;
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
 
       p:first-child {
         font-size: 0.8rem;
