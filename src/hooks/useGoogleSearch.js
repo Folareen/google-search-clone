@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 const baseUrl = "https://google-search3.p.rapidapi.com/api/v1/";
 const useGoogleSearch = (term, type) => {
   const [loading, setLoading] = useState(false);
@@ -7,6 +7,7 @@ const useGoogleSearch = (term, type) => {
 
   useEffect(() => {
     googleSearch();
+    // eslint-disable-next-line
   }, [term]);
 
   const googleSearch = async () => {

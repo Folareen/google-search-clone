@@ -8,7 +8,7 @@ import {SearchTermContext} from '../context/SearchTermContext'
 import Error from '../components/Error'
 
 const Images = () => {
-  const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
+  const {searchTerm} = useContext(SearchTermContext)
 
   const [loading, result, error] = useGoogleSearch(searchTerm, "image")
 
@@ -27,7 +27,7 @@ const Images = () => {
       <div>
         {result?.image_results?.map(({ image, link: { href, title } }, index) => {
           return (
-          <a href={href} target="_blank" key={index}>
+          <a href={href} target="_blank" rel='noreferrer' key={index}>
             <img src={image?.src} alt={title} />
             <p >{title}</p>
           </a>)

@@ -5,9 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Images from "./pages/Images";
 import Videos from "./pages/Videos";
 import News from "./pages/News";
-import { useContext } from "react";
 import SearchTermContextProvider from "./context/SearchTermContext";
-// import
 
 function App() {
   return (

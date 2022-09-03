@@ -7,7 +7,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { SearchTermContext } from "../context/SearchTermContext";
 
 const SearchField = ({ showButtons, size }) => {
-  const { searchTerm, setSearchTerm, inputValue, setInputValue} = useContext(SearchTermContext);
+  const {setSearchTerm, inputValue, setInputValue} = useContext(SearchTermContext);
   const navigate = useNavigate();
   const location = useLocation();
 

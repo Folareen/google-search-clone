@@ -9,7 +9,7 @@ import {SearchTermContext} from '../context/SearchTermContext'
 import Error from '../components/Error'
 
 const Videos = () => {
-  const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
+  const {searchTerm} = useContext(SearchTermContext)
 
   const [loading, result, error] = useGoogleSearch(searchTerm, "video")
 

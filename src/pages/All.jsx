@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, { useContext} from 'react'
 import SearchNav from '../components/SearchNav'
 import StyledAll from '../styles/StyledAll.styled'
 import SearchField from '../components/SearchField'
@@ -9,7 +9,7 @@ import Error from '../components/Error'
 
 const AllResults = () => {
 
-  const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
+  const {searchTerm} = useContext(SearchTermContext)
 
   const [loading, result, error] = useGoogleSearch(searchTerm, "search")
 

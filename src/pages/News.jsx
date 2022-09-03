@@ -9,7 +9,7 @@ import Error from '../components/Error'
 
 const News = () => {
 
-  const {searchTerm, setSearchTerm} = useContext(SearchTermContext)
+  const {searchTerm} = useContext(SearchTermContext)
 
   const [loading, result, error] = useGoogleSearch(searchTerm, "news")
 
